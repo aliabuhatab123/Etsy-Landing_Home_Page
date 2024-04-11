@@ -1,0 +1,531 @@
+:root {
+
+    --primary-color: #FFFFFF;
+    --secondary-color-1: #FFFBD8; 
+    --secondary-color-2: #343841;
+    --secondary-color-3: #EEE1FF;
+    --secondary-color-4: #E9E9E9;
+    --acent-color: #F69A6C;
+
+/* font sizes */
+
+--fs-1: 4.2rem;
+--fs-2: 3.2rem;
+--fs-3: 2.3rem;
+--fs-4: 1.8rem;
+--fs-5: 1.5rem;
+--fs-6: 1.4rem;
+--fs-7: 1.3rem;
+
+--fw-500: 500;
+--fw-600: 600;
+
+
+/* spacing */
+
+--section-padding: 75;
+
+/* shadow  */
+
+--shadow-1: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+--shadwo-2: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+--shadow-3: rgba(0, 0, 0, 0.09) 0px 1px 3px;
+--shadow-4:rgba(0, 0, 0, 0.1) 0px 16px 39px 4px, rgba(0, 0, 2, 0.13) 1px 0px 8px 0px;
+
+/* raduis */
+--raduis-3: 3px;
+--raduis-5: 5px;
+--raduis-10: 10px;
+--raduis-15: 15px;
+
+/* transition */
+
+--transition-1: 0.25s ease;
+--transition-2: 0.5s ease;
+
+}
+
+
+/* RESET STYLES */
+
+li { list-style: none;}
+
+a, img, span, data, input {display: block;}
+
+a {color: inherit; text-decoration: none;}
+
+img {height: auto;}
+
+i {
+    color: var(--secondary-color-2);
+    font-size: 1.3rem;
+    
+}
+
+i, a {
+    padding: 5px 9px;
+}
+input {width: 100%; border: none;}
+
+html {
+    font-family: "Inert";
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--primary-color);
+    font-size: 1.2rem;
+    line-height: 1.75;
+    height: 400vh;
+    margin: 0 auto;
+    font-family: "Poppins";
+    box-sizing: border-box;
+}
+
+
+.top-header-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 850px;
+    margin: 9px auto;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.input-container {
+    display: flex;
+    border: 1.6px solid #222222;
+    border-radius: 18px;
+    padding: 8px 10px;
+    align-items: center;
+    width: 530px;
+    color: var(--secondary-color-1);
+}
+
+.input-container input {
+    font-size: 1rem;
+}
+.input-container i {
+    padding: 0;
+}
+
+input.search-input:focus-visible {
+    outline: none;
+}
+
+.categories i{
+    margin-right: 5px;
+}
+
+.sub-top-header-container .top-nav {
+    display: flex;
+    margin: 0 auto;
+    width: 470px;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-bottom: 3px;
+    align-items: baseline;
+    margin-top: -7px;
+    margin-bottom: 17px;
+}
+i:hover, .sub-top-header-container .top-nav a:hover, i:hover {
+    background-color: var(--secondary-color-4);
+    border-radius: var(--raduis-15);
+}
+
+.sub-top-header-container .top-nav{
+    font-size: 10px;
+}
+
+.top-header {
+    box-shadow: var(--shadow-3);
+}
+
+.gifts-container-bg {
+    background-color: var(--secondary-color-3);
+    width: 100%;
+    height: 120px;
+    margin: -15px auto;
+}
+.gifts-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    text-wrap: wrap;
+    margin-top: -70px
+}
+.gifts-container img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50px;
+    box-shadow: var(--shadow-1);
+}
+
+.gift-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.gift-box:hover {
+    transform: scale(1.08);
+    transition: transform .2s;
+}
+.gift-box:hover::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    width: 60px;
+    height: 1px;
+    background-color: #000000;
+}
+.gift-box p {
+    width: 80px;
+    line-height: 1.5rem;
+}
+
+
+
+.gifts-container-heading {
+    font-weight: 100;
+    text-align: center;
+}
+
+.recently-viewed-section {
+    max-width: 850px;
+    display: grid;
+    grid-template-columns: 166px 166px 166px 166px 166px;
+    margin: 0 auto;
+    gap: 4px;
+}
+
+.recently-viewed-section img {
+    width: 100%;
+    border-radius: var(--raduis-5);
+}
+
+.product-container {
+    position: relative;
+}
+.product-container .product-price {
+    position: absolute;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 1px 7px;
+    font-size: 1rem;
+    left: 4px;
+}
+
+.heading-recently-viewed-section {
+    display: flex;
+    justify-content: space-between;
+    width: 850px;
+    margin: 5px auto -11px auto;
+}
+
+.heading-recently-viewed-section .right {
+    color: gray;
+    margin-right: -10px;
+}
+.heading-recently-viewed-section .right a {
+    text-decoration: underline;
+    padding: 0;
+}
+
+.heading-recently-viewed-section .right p{
+    display: flex;
+    width: 220px;
+    font-size: 1rem;
+    justify-content: space-between;
+    margin-right: 15px;
+}
+
+.popu-section-hrading {
+    margin: 0 auto;
+    width: 850px;
+    margin-top: 65px;
+    margin-bottom: -55px;
+}
+.popular-gift-categories {
+    display: flex;
+    margin: 60px auto 0 auto;
+    width: 850px;
+}
+.popular-gift-categories img {
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.popular-gift-categories .category {
+    margin: 0 6px;
+    border: 1px solid lightgray;
+    text-align: center;
+    border-radius: 8px;
+}
+.popular-gift-categories .category:hover {
+    box-shadow: var(--shadow-4);
+}
+.popular-gift-categories .category p {
+    font-weight: bold;
+    font-family: inert;
+}
+
+
+h2.top-heading-about-etsy {
+    text-align: center;
+    font-size: 2.4rem;
+    font-family: "Poppins";
+    font-weight: 300;
+    padding: 25px 0 1px 0;
+    margin: 65px auto 0 auto;
+    background-color: var(--secondary-color-1);
+}
+span.sub-heading a {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0;
+    background-color: var(--secondary-color-1);
+    margin-top: -7px;
+    text-decoration: underline;
+}
+
+.wt-is-etsy {
+    padding: 4px 32px;
+    display: flex;
+    background-color: var(--secondary-color-1);
+    justify-content: center;
+}
+.wt-is-etsy p {
+    max-width: 240px;
+}
+.wt-is-etsy .paragraph {
+    margin: 0 8px;
+    font-size: 0.8em;
+    font-weight: 100;
+}
+.wt-is-etsy .paragraph-heading {
+    font-size: 1.4rem;
+}
+.wt-is-etsy .paragraph a {
+    padding: 0;
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 3px;
+}
+
+.question-section {
+    text-align: center;
+    background-color: var(--secondary-color-1);
+    margin-top: -16px;
+}
+
+.question-section h3 {
+    font-weight: 500;
+}
+.cta-btn-help {
+    padding: 2px 0 25px;
+    font-size: 1.1rem;
+}
+.cta-btn-help a {
+    padding: 3px 4px;
+    width: 120px;
+    margin: 0 auto;
+    border: 1.5px solid black;
+    border-radius: 15px;
+}
+.cta-btn-help a:hover {
+    box-shadow: var(--shadow-4);
+    border: 1.95px solid black;
+    transition: transform 200ms cubic-bezier(0.345, 0.115, 0.135, 1.42), background 150ms ease-out, box-shadow 200ms ease-out;
+}
+
+.subscribe-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--secondary-color-3);
+}
+
+.subscribe-section>p {
+    font-size: 1rem;
+    font-weight: 500;
+}
+.subscribe-section .input-container {
+    padding: 0 5px;
+    background-color: #ffffff;
+    color: black;
+    width: 320px;
+    border: 1px solid lightgray;
+    margin-bottom: 25px;
+}
+.subscribe-section .input-container input {
+    background-color: #ffffff;
+    padding: 3px 15px;
+    outline: none;
+}
+
+.cta-btn-subscribe {
+    background-color: black;
+    border-radius: 25px;
+    padding-right: -16px;
+    transform: translateX(10px);
+    color: white;
+    font-size: 1rem;
+}
+
+.env-powerfull {
+    text-align: center;
+    background-color: #3B67D9;
+    color: white;
+    font-size: 1.2rem;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.env-powerfull a {
+    margin: 0 auto;
+}
+.bottom-footer-container, .right-footer-container {
+    display: flex;
+    height: 265px;
+    width: 100%;
+    background-color: #3140af;
+}
+
+.app-download {
+    color: white;
+    position: relative;
+    background-color: #122868 ;
+    width: 450px;
+    margin-left: 150px;
+}
+.app-download .thumbinal {
+    position: absolute;
+    right: 40%;
+    top: 40%;
+    background-color: #F1641E;
+    padding: 7px 10px;
+    border-radius: 8px;
+    font-family: sans;
+    font-size: 1.4rem;
+}
+.cta-app-download {
+    color: white;
+    background-color: #3140AF;
+    position: absolute;
+    right: 25%;
+    top: 68%;
+    padding: 3px 4px;
+    border-radius: 18px;
+    font-family: sans;
+    font-size: 1.2rem;
+    width: 140px;
+}
+.cta-app-download:hover {
+    box-shadow: var(--shadow-4);
+}
+
+.right-footer-container {
+    background-color: #3140AF;
+    color: white;
+    font-size: 12px;
+    padding: 30px auto 10px 0;
+    font-weight: 200;
+}
+.right-footer-container a {
+    padding: 0;
+}
+.right-footer-container ul li a {
+    padding: 3px;
+}
+
+
+
+/* Media Quaries */
+  
+  @media only screen and (max-width: 370px) {
+
+.recently-viewed-section {
+    display: grid;
+    grid-template-columns: auto;
+    margin: 0 1.5vw;
+    gap: 12px;
+}
+
+.gifts-container-bg {
+    width: 100%;
+    height: 30vh;
+    margin: -15px auto;
+}
+
+.gifts-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: -22vh auto -5px;
+}
+.popular-gift-categories {
+    margin: 60px auto 0 auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+}
+.popular-gift-categories .category {
+    margin: 6px 6px;
+}
+
+.wt-is-etsy {
+    display: block;
+}
+
+.subscribe-section .input-container {
+    width: 264px;
+    border: 1px solid lightgray;
+    margin-bottom: 25px;
+}
+.subscribe-section>p {
+    padding: 2px 28px;
+}
+
+.bottom-footer-container, .right-footer-container {
+    
+    display: block;
+    height: 100%;
+    background-color: #3140af;
+    margin-top: -12px;
+
+    
+    
+}
+  }
+
+  @media only screen and (min-width: 370px) {
+.recently-viewed-section {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 0 1.5vw;
+    gap: 12px;
+}
+  }
+
+
+  @media only screen and (min-width: 570px) {
+    .recently-viewed-section {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        margin: 0 1.5vw;
+        gap: 12px;
+    }
+      }
+
+
+      @media only screen and (min-width: 870px) {
+        .recently-viewed-section {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            gap: 12px;
+            margin: 0 auto;
+        }
+          }
